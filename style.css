@@ -1,0 +1,177 @@
+body{ /*fond de site*/
+    background-color : #E6E6E8;
+    padding: 20px;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4 { /* attribu commun a toutes les écritures */
+    text-align: center;
+}
+
+h1{ /* titre principaux */
+    color: #000034 ;
+    font-size: xx-large;
+    text-decoration: underline dotted #1A1F31;
+}  
+h2{ /* titre de la page */
+    color: #1A1F31 ;
+    font-size: x-large;
+}
+h4{ /* citation */
+    color: white ;
+    font-style: italic;
+    margin: 3%;
+}
+div.cadre {/*cadre de ma sitation*/
+    width: 50%;
+    border-radius: 20px;
+    border: 1px white;
+    background-color: #000034;
+    padding : 1%;
+    margin:auto;
+}
+
+a{
+    color: #E6E6E8;
+}
+
+p.citation{
+    font-family: "Satisfy", cursive;
+    font-size: xx-large;
+}
+
+div.contenu p, ul{ /* texte des pages type infos et les listes d'informations classique */
+    color: #1A1F31;
+    text-align: justify;
+    width: 70%;
+    line-height: 23px;
+    margin:  auto;
+}
+
+nav{ /* mise en page de la barre d'attache */
+    ul{ 
+        display: flex;
+        padding: 0; /* Supprime les marges internes */
+        background-color : #ccc;
+        justify-content: center
+    }
+        li{list-style-type: none;} /* Supprime points de la liste */
+    a{
+        display:block ; 
+        min-width: 170px; /*défini la largeur min des liens*/
+    }    
+    a{
+        margin:  0.5rem; /*marges externes*/
+        padding: 0.4rem 0; /*marges haut+bas et gauche+droite*/
+        text-align: center; /*texte au centre*/
+        background-color: #000034; 
+        color: #ffffff;
+        text-decoration: none;/* supprime les soulignement */
+        border: 1px solid white; /* burdure autour des "cases" */
+        border-radius: 4px; } /* arrondis des bordures */
+    a:hover, a.actif{ /*paramètre au survol des boutons et quand on est SUR la page*/
+    background-color: white;
+    color: #000034;
+    border-color: #000034;}
+    }
+
+footer{
+    margin: 10px;
+    background-color : #1A1F31;
+    padding: 10px; /*marge interne*/
+    gap: 35px;
+    p{
+        color: white;
+        margin: 0px 0 10px 0; /*marge haut, droite, bas, gauche*/
+        text-align: center;
+        display: block;     
+    }
+}
+
+img, video { /*image et vidéo générale*/
+    border-radius: 20px;
+    width: 70%;
+    display:flex;
+    margin: auto;
+}
+
+img.icon{ /*image icone*/
+    width: 50px;   
+    border-radius: 0%;
+}
+
+img.portrait{ /*image page équipe*/
+    width: 230px;
+    border-radius: 20%;
+}
+
+img.littoraux{ /*image page littoraux*/
+    width: 45%;
+    border: 1px white solid;
+    text-align: center;
+    display:block;
+    margin: 25px;
+}
+
+div.imagetete{ /*image accueil*/
+    background-image: url(image/tete.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 350px;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    display: flex;
+    justify-content: center; /*centre dans la longueur*/
+    align-items: center; /*centre dans la hauteur*/
+}
+
+div.case{ /*groupe texte + image  page équipe */
+    display:flex ;
+    flex-direction: column;
+    align-items: center
+}
+
+div.alignement{ /*placement image/texte au centre les uns à coté des autres */
+    display: flex;
+    gap:5%; /*espace entre image/texte*/
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1%;
+}
+
+
+@media screen and (max-width:500px){ 
+    h4{
+        margin: 10%;
+    }
+
+    div.contenu p, ul{/* agrandissement de la largeur des textes, et liste */
+        width: 90%;
+        flex-direction: column;
+    }
+
+    div.alignement {/* réarangement texte/ images du site*/
+        flex-direction: column;
+        gap: 1%;
+        align-items: center;
+    }
+    div.alignement.reverse {/* reverse*/
+        flex-direction: column-reverse;
+    }
+
+    img.littoraux{/* tailles images littoraux*/
+        width: 90%;
+     }
+    img.icon { /* ajustement tailles des icons*/
+        width: 15%;
+    }
+    img.portrait { /* ajustement tailles des portraits*/
+        width: 60%;
+    }
+    video {/* ajustement tailles des vidéos*/
+        width: 95%;
+    }
+}
