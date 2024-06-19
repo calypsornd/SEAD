@@ -115,7 +115,7 @@ img.littoraux{ /*image page littoraux*/
 }
 
 div.imagetete{ /*image accueil*/
-    background-image: url(image/tete.png);
+    background-image: url(tete.png);
     background-size: cover;
     background-position: center;
     min-height: 350px;
